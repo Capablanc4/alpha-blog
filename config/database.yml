@@ -20,6 +20,13 @@ test:
   <<: *default
   database: storage/test.sqlite3
 
+cable:
+  adapter: postgresql
+  database: myapp_cable
+  username: user
+  password: <%= ENV['PROD_DB_PASSWORD'] %>
+  host: prod-db-host
+
 production:
   adapter: postgresql
   encoding: unicode
