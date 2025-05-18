@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body>
+    <h1 style="color: blue;">Bienvenido a mi Pagina</h1>
+    <ul>
+        <a href="">
+            <li>Acerca de mi</li>
+        </a>
+        <a href="">
+            <li>Herramientas que conozco</li>
+        </a>
+        <a href="">
+            <li>Contacto</li>
+        </a>
+    </ul>
+    <h2>Acerca de mi : </h2>
+    <p>Hola mi nombre es Santiago soy desarrollador de software</p>
+    <h2>Herramientas que conozco</h2>
+    <ol>
+        <li>Visual Estudio Code</li>
+        <li>Eclipse</li>
+        <li>Visual estudio</li>
+        <li>Vim</li>
+    </ol>
+    <br><br>
+    <h1>Contacto</h1>
+    <form action="">
+        <label for="nombre"> Nombre </label><br>
+        <input type="text" name="nombre" id="nombre" placeholder=" Escrite tu nombre"><br><br>
+
+
+        <label for="mensaje"> Mensaje </label><br>
+        <textarea name="mensaje" id="mensaje"></textarea>
+
+        <br><br>
+
+        <input type="submit" value="Enviar">
+
+
+    </form>
+    <br><br><br>
+    <footer>&copy;Zavaleta 2025</footer>
+    <%= link_to "About" ,about_path %>
+
+
+
+</body>
+
+</html>
+
+
+
