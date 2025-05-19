@@ -1,5 +1,3 @@
-# Uso de SQLite en dev y test, PostgreSQL en prod
-
 default_sqlite: &default_sqlite
   adapter: sqlite3
   pool:    <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
@@ -13,22 +11,5 @@ test:
   <<: *default_sqlite
   database: db/test.sqlite3
 
-# Configuración para producción en Heroku con roles múltiples
-production_primary: &production_primary
-  adapter:  postgresql
-  encoding: unicode
-  pool:     <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  url:      <%= ENV['DATABASE_URL'] %>
-
 production:
-  primary:
-    <<: *production_primary
-
-  cable:
-    <<: *production_primary
-
-  queue:
-    <<: *production_primary
-
-  cache:
-    <<: *production_primary
+  url: <%= ENV['DATABASE_URL'] %>
