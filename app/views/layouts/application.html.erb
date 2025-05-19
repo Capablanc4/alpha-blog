@@ -23,11 +23,8 @@
   </head>
 
   <body data-turbo="false">
-    <% flash.each do |name, msg| %>
-      <ul>
-        <li><%= msg %></li>
-      </ul>
-    <% end %>
+    <%= javascript_importmap_tags %>
+    <%= render 'layouts/messages' %>
     <%= yield %>
   </body>
 </html>
