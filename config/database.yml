@@ -1,4 +1,5 @@
 # config/database.yml
+
 default_sqlite: &default_sqlite
   adapter: sqlite3
   pool:    <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
@@ -14,4 +15,4 @@ test:
 
 production:
   adapter: postgresql
-  url:       <%= ENV['DATABASE_URL'] %>
+  url:     <%= ENV['DATABASE_URL'] %>
