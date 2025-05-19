@@ -22,7 +22,12 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body data-turbo="false">
+    <% flash.each do |name, msg| %>
+      <ul>
+        <li><%= msg %></li>
+      </ul>
+    <% end %>
     <%= yield %>
   </body>
 </html>
