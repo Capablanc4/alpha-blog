@@ -1,20 +1,17 @@
 # config/database.yml
 
-# Desarrollo y test usan SQLite
-default_sqlite: &default_sqlite
+development:
   adapter: sqlite3
   pool:    <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
-
-development:
-  <<: *default_sqlite
   database: db/development.sqlite3
 
 test:
-  <<: *default_sqlite
+  adapter: sqlite3
+  pool:    <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
   database: db/test.sqlite3
 
-# Producción usa PostgreSQL vía la URL de Heroku
 production:
   adapter:  postgresql
   encoding: unicode
