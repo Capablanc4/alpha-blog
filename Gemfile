@@ -2,6 +2,10 @@ source "https://rubygems.org"
 
 
 ruby "3.3.6"
+# Use scss for stylesheets
+gem "bootstrap", "~> 5.3.0"
+gem "sassc-rails"
+
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.0.2"
@@ -68,5 +72,5 @@ group :test do
 end
 
 group :production do
-  gem 'pg'
+  gem "pg"
 end
