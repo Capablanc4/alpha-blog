@@ -22,6 +22,7 @@ module AlphaBlog
 
     # Disable the old asset pipeline (Sprockets)
     config.assets.enabled = false
+    config.assets.paths << Rails.root.join("app/assets/builds") # Ruta de salida de esbuild
 
     # Configure Propshaft to ignore build output and node_modules
     config.propshaft.ignore = [/^node_modules\//]
