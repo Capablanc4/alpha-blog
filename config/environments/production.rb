@@ -80,7 +80,7 @@ Rails.application.configure do
   config.active_record.attributes_for_inspect = [ :id ]
 
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
-  config.assets.compile = true
+  #config.assets.compile = true
 
 
   # Enable DNS rebinding protection and other `Host` header attacks.
