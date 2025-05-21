@@ -1,12 +1,5 @@
-<% if @article.errors.any? %>
-<h2>The following errors preventend the article from getting created</h2>
-<ul>
-  <% @article.errors.full_messages.each do |msg|  %>
-  <li><%= msg %></li>
-  <% end %>
-</ul>
-<% end %>
-
+<br>
+<%= render "shared/errors", obj: @article %>
 
 <div class="container mt-4">
   <div class="row justify-content-center">
@@ -25,7 +18,7 @@
         </div>
 
         <div class="d-grid gap-2">
-          <%= f.submit "Create Article", class: "btn btn-primary btn-lg" %>
+          <%= f.submit @article.persisted? ? "Update Article" : "Create Article", class: "btn btn-primary btn-lg" %>
         </div>
 
       <% end %>

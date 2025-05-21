@@ -1,5 +1,11 @@
-<% flash.each do |name, msg| %>
-      <ul>
-        <li><%= msg %></li>
-      </ul>
-<% end %>
+<div class="row">
+  <div class="col-10 offset-1">
+    <% flash.each do |name, msg| %>
+      <div class="alert alert-<%= name == "notice" ? "success" : "danger" %> alert-dismissible fade show" role="alert">
+        <%= msg if msg.is_a?(String) %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    <% end %>
+  </div>
+</div>
+
