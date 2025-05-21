@@ -9,7 +9,7 @@
  * Consider organizing styles into separate files for maintainability.
  */
 // Custom variables (debes definirlas ANTES de importar Bootstrap)
-$navbar-dark-bg: #a93226;
+$navbar-dark-bg: #000000;
 $navbar-dark-color: #f2f3f4;
 
 // Importa Bootstrap
@@ -30,4 +30,59 @@ $navbar-dark-color: #f2f3f4;
     text-transform: uppercase;
     letter-spacing: -1px;
     font-weight: bold;
+}
+
+#logo:hover {
+    color: #ffffff;
+    text-decoration: none;
+
+}
+
+.center {
+    text-align: center;
+}
+
+.jumbotron {
+    background-image: url('kamehouse.jpeg'); // si estás dentro del SCSS ya en assets
+    background-size: cover;
+    background-position: center;
+    height: 550px;
+}
+
+.jumbotron h1 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+.btn-lg {
+    font-size: 1.7em;
+    background-color: black;
+}
+
+footer {
+    margin-top: 45px;
+    padding-top: 5px;
+    border-top: 1px solid #eaeaea;
+    color: #777;
+}
+
+footer a:hover {
+    color: #222;
+}
+
+footer small {
+    float: left;
+}
+
+footer ul {
+    float: right;
+    list-style: none;
+}
+
+footer ul li {
+    float: left;
+    margin-left: 15px;
 }
