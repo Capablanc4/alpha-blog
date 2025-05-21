@@ -20,7 +20,7 @@ Bundler.require(*Rails.groups)
 
 module AlphaBlog
   class Application < Rails::Application
-    # Initialize configuration defaults for originally generated Rails version.
+    # Initialize configuration defaults for Rails 8.0
     config.load_defaults 8.0
 
     # Disable the old asset pipeline (Sprockets)
@@ -28,9 +28,6 @@ module AlphaBlog
 
     # Include the builds directory so Propshaft can serve compiled assets
     config.assets.paths << Rails.root.join("app/assets/builds")
-
-    # Configure Propshaft to ignore node_modules and other non-asset dirs
-    config.propshaft.ignore = [/^node_modules\//]
 
     # Autoload lib subdirectories, excluding non-Ruby dirs
     config.autoload_lib(ignore: %w[assets tasks])
