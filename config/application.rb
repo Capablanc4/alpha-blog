@@ -9,9 +9,12 @@ require "action_controller/railtie"
 require "action_mailer/railtie"
 require "action_view/railtie"
 require "action_cable/engine"
-# require "sprockets/railtie"   # <-- Remove Sprockets
-require "propshaft/railtie"     # <-- Add Propshaft
-# require "rails/test_unit/railtie"
+# Remove Sprockets entirely
+# require "sprockets/railtie"
+
+# Ensure Propshaft base is loaded before its Railtie
+require "propshaft"
+require "propshaft/railtie"
 
 Bundler.require(*Rails.groups)
 
@@ -22,9 +25,11 @@ module AlphaBlog
 
     # Disable the old asset pipeline (Sprockets)
     config.assets.enabled = false
-    config.assets.paths << Rails.root.join("app/assets/builds") # Ruta de salida de esbuild
 
-    # Configure Propshaft to ignore build output and node_modules
+    # Include the builds directory so Propshaft can serve compiled assets
+    config.assets.paths << Rails.root.join("app/assets/builds")
+
+    # Configure Propshaft to ignore node_modules and other non-asset dirs
     config.propshaft.ignore = [/^node_modules\//]
 
     # Autoload lib subdirectories, excluding non-Ruby dirs
