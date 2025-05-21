@@ -8,29 +8,26 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+// Custom variables (debes definirlas ANTES de importar Bootstrap)
+$navbar-dark-bg: #a93226;
+$navbar-dark-color: #f2f3f4;
 
-// 👇 Primero tus sobrescrituras de variables Bootstrap
-$navbar-dark-bg: #aa5781;
-$navbar-dark-color: #ffffff;
-$navbar-dark-hover-color: #f8d7e0; // Opcional para hover
-
-// 👇 Luego importa bootstrap
+// Importa Bootstrap
 @import "bootstrap/scss/bootstrap";
 
-// 👇 Tu clase personalizada (usando tus colores)
+// Opcional: Clases personalizadas adicionales
 .navbar-custom {
+    @extend .navbar-dark; // Hereda estilos de navbar-dark
+    // Puedes añadir modificaciones adicionales aquí
     background-color: $navbar-dark-bg !important;
-    color: $navbar-dark-color;
+    font-weight: bold;
+}
 
-    .navbar-nav .nav-link {
-        color: $navbar-dark-color !important;
-    }
-
-    .navbar-nav .nav-link:hover {
-        color: $navbar-dark-hover-color !important;
-    }
-
-    .navbar-brand {
-        color: $navbar-dark-color !important;
-    }
+#logo {
+    float: left;
+    font-size: 1.7em;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
 }
