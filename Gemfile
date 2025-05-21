@@ -72,6 +72,7 @@ end
 
 group :production do
   gem "pg"
+  gem "propshaft"
 end
 gem "jsbundling-rails", "~> 1.3"
 
