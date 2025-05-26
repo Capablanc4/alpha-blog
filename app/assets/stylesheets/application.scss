@@ -136,4 +136,13 @@ a {
 
 h4 {
     text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+ul.text-center {
+    list-style-position: inside;
+    padding-left: 0;
+    display: inline-block;
+    text-align: left;
 }

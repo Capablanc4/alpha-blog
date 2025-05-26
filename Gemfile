@@ -44,6 +44,8 @@ gem "thruster", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
+# Para pagination en rails 8
+gem 'pagy', '~> 9.3', '>= 9.3.4'
 
 group :development, :test do
   gem "sqlite3", ">= 2.1"
