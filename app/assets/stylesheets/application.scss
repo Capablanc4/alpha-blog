@@ -9,7 +9,7 @@
  * Consider organizing styles into separate files for maintainability.
  */
 // Custom variables (debes definirlas ANTES de importar Bootstrap)
-$navbar-dark-bg: #000000;
+$navbar-dark-bg: #2e302e;
 $navbar-dark-color: #f2f3f4;
 
 // Importa Bootstrap
@@ -47,6 +47,7 @@ $navbar-dark-color: #f2f3f4;
     background-size: cover;
     background-position: center;
     height: 550px;
+    border-radius: 10%;
 }
 
 .jumbotron h1 {
@@ -145,4 +146,16 @@ ul.text-center {
     padding-left: 0;
     display: inline-block;
     text-align: left;
+}
+
+.fondo {
+    background-color: darkgray;
+}
+
+.btn-custom-green {
+    background-color: #28a745;
+    /* tu color personalizado */
+    color: #fff;
+    /* texto blanco */
+    font-weight: bold;
 }

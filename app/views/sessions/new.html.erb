@@ -1,0 +1,21 @@
+<h1>Log in</h1>
+<%= form_with url: '/login', local: true,  html: { class: "border p-4 rounded shadow-sm bg-light" } do |f| %>        
+        <div class="mb-3">
+          <%= f.label :email, class: "form-label" %>
+          <%= f.email_field :email, class: "form-control", placeholder: "Enter email" %>
+        </div>
+
+        <div class="mb-3">
+          <%= f.label :password, class: "form-label" %>
+          <%= f.password_field :password, class: "form-control", placeholder: "Enter password" %>
+        </div>
+
+        <div class="d-grid gap-2">
+          <%= f.submit "Log in", class: "btn btn-primary btn-lg" %>
+        </div>
+
+<% end %>
+
+      <div class="text-center mt-3">
+        [<%= link_to 'Are u not register?', signup_path, class: "btn btn-link" %>]
+      </div>
