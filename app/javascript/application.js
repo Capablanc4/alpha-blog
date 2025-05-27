@@ -8,6 +8,6 @@ Rails.start()
 import "bootstrap/dist/js/bootstrap.bundle.js"
 //= require pagy      // Asset Pipeline
 // o
-import "pagy"        // Importmap/Webpacker/Esbuild
+//import "pagy"        // Importmap/Webpacker/Esbuild
 
 
