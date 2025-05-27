@@ -3,8 +3,8 @@
 # Pagy initializer file (9.3.3)
 # Customize only what you really need and notice that the core Pagy works also without any of the following lines.
 # Should you just cherry pick part of this file, please maintain the require-order of the extras
+require 'pagy'
 require 'pagy/extras/bootstrap'
-require 'pagy/extras/frontend'
 
 # config/initializers/pagy.rb
 # config/initializers/pagy.rb
