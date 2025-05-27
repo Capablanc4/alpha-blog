@@ -28,7 +28,7 @@
     </div>
     <%= render 'layouts/footer' %>
     <br>
-    <%= pagy_js_bootstrap_nav %>
+    <%= pagy_bootstrap_nav(@pagy) if @pagy %>
 
     <%# debug(params) if Rails.env.development? %>
   </body>
