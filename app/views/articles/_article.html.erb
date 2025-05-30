@@ -9,6 +9,12 @@
           <p class="text-muted article-body">
             <%= truncate(article.description, length: 100) %>
           </p>
+          <p class="text-muted article-body">
+            <strong>Creation date : </strong><%= article.created_at.strftime("%d/%m/%Y") %>
+          </p>
+          <% if article.categories.any? %>
+            <strong>Categories : </strong><%= render article.categories%>
+          <% end %>
           <% if logged_in? && (current_user == article.user || current_user.admin?) %>
             <div class="d-flex gap-2 mt-3">
               <%= link_to 'Edit article', edit_article_path(article), class: "btn btn-primary glow-hover" %>

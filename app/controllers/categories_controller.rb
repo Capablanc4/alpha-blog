@@ -18,8 +18,21 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def edit
+    @category = Category.find(params[:id])
+  end
+
+  def update
+    @category = Category.find(params[:id])
+    if @category.update(category_params)
+      flash[:notice] = "Category was successfully updated"
+      redirect_to categpry_path(@category)
+    end
+  end
+
   def show
-    
+    @category = Category.find(params[:id])
+    @pagy, @category_articles = pagy(@category.articles)
   end
 
   private

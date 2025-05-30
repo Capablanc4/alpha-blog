@@ -1,0 +1,7 @@
+<h1 class="text-center mb-4 text-dark">
+    <%= "Category : #{@category.name}" %>
+</h1>
+<%= render 'articles/article', obj: @category_articles %>
+<div class="d-flex justify-content-center">
+  <%== pagy_bootstrap_nav(@pagy) if @pagy.pages > 1 %>
+</div>
